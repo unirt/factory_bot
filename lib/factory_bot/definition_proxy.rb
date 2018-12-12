@@ -174,6 +174,10 @@ module FactoryBot
       @definition.define_trait(Trait.new(name, &block))
     end
 
+    def traits_for_enum(name)
+      @definition.define_traits_for_enum(TraitsForEnum.new(name))
+    end
+
     def initialize_with(&block)
       @definition.define_constructor(&block)
     end
